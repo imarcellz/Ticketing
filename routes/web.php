@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TicketController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,4 +19,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware(['auth', 'admin'])->group(function () {
+
+    Route::get('admin/dashboard', [HomeController::class,'index']);
+    Route::get('/admin/ticketing', [TicketController::class, 'index'])->name('admin/ticketing');
+
+    Route::get('/admin/ticketing/create', [TicketController::class, 'create'])->name('admin/ticketing/create');
+    Route::post('/admin/ticketing/save', [TicketController::class, 'save'])->name('admin/ticketing/save');
+    
+});
+
 require __DIR__.'/auth.php';
+
