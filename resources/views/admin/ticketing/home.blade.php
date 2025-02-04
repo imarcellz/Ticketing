@@ -48,8 +48,8 @@
                                 <td class="align-middle">{{ $ticket->created_at }}</td>
                                 <td class="align-middle">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <a href="" type="button" class="btn btn-secondary">Edit</a>
-                                        <a href="" type="button" class="btn btn-danger">Delete</a>
+                                        <a href="{{route('admin/ticketing/edit', ['id'=>$ticket->id])}}" type="button" class="btn btn-secondary">Edit</a>
+                                        <a href="{{ route('admin/ticketing/delete', ['id'=>$ticket->id]) }}" type="button" class="btn btn-danger">Delete</a>
                                         </form>
                                     </div>
                                 </td>
@@ -65,5 +65,6 @@
             </div>
         </div>
     </div>
-    </div>
 </x-app-layout>
+
+
