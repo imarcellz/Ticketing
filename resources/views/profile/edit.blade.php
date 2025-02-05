@@ -12,7 +12,7 @@
                     <!-- Form Upload Foto Profil -->
                     <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
                         @csrf
-                        @method('PUT')
+                        @method('PATCH')
 
                         <div>
                             <label for="name">Name</label>
@@ -29,16 +29,23 @@
                             <input type="file" name="profile_picture" id="profile_picture" accept="image/*" />
                         </div>
 
-                        <button type="submit">Simpan Perubahan</button>
-                    </form>
+                        <!-- Input untuk Biodata -->
+                        <div class="mb-4">
+                            <label for="biodata" class="block text-gray-700 font-semibold">Biodata</label>
+                            <textarea name="biodata" id="biodata" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md">{{ old('biodata', $user->biodata) }}</textarea>
+                        </div>
 
-                    <!-- Menampilkan Foto Profil jika ada -->
-                    @if ($user->profile_picture)
+
+                        <!-- Menampilkan Foto Profil jika ada -->
+                        @if ($user->profile_picture)
                         <div>
                             <h3>Foto Profil</h3>
                             <img src="{{ asset('storage/' . $user->profile_picture) }}" alt="Foto Profil" width="150" />
                         </div>
-                    @endif
+                        @endif
+
+                        <x-primary-button>{{ __('Save') }}</x-primary-button>
+                    </form>
                 </div>
             </div>
 
