@@ -18,7 +18,7 @@ Proyek ini merupakan sistem ticketing berebasis Laravel 11 dengan Autentikasi da
 - GitBash
 
 ## Instalasi
-'''GitBash
+'''GitBash''
 - git clone https://github.com/imarcellz/Ticketing.git
 
 - cd Ticketing
