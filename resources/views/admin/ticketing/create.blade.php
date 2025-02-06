@@ -1,4 +1,8 @@
 <x-app-layout>
+
+@section('title', 'Create Reporting')
+
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Add Reporting') }}
@@ -26,48 +30,57 @@
                         </div>
                     </div>
                     @error('group_name')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="row mb-3">
                         <div class="col">
                             <input type="number" name="category_id" class="form-control" placeholder="Category ID">
                         </div>
                     </div>
                     @error('category_id')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" name="status" class="form-control" placeholder="Status">
+                            <select name="status" class="form-control">
+                                <option value="" disabled selected>Pilih Status</option>
+                                <option value="Closed">Closed</option>
+                                <option value="Open">Open</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Resolved">Complated</option>
+                                <option value="Resolved">In Progress</option>
+
+                            </select>
                         </div>
                     </div>
+
                     @error('status')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="row mb-3">
                         <div class="col">
                             <input type="text" name="details" class="form-control" placeholder="Details">
                         </div>
                     </div>
                     @error('details')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="row mb-3">
                         <div class="col">
                             <input type="number" name="handled_by" class="form-control" placeholder="Handled By">
                         </div>
                     </div>
                     @error('handled_by')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="row mb-3">
                         <div class="col">
                             <input type="text" name="sender" class="form-control" placeholder="Sender">
                         </div>
                     </div>
                     @error('sender')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
 
                     <div class="row">
                         <div class="d-grid">

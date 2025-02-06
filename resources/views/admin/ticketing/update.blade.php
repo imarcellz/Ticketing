@@ -31,10 +31,17 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col mb-3">
-                                <label class="form-label">status</label>
-                                <input type="text" name="status" class="form-control" placeholder="status" value="{{ $ticket->status }}">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <select name="status" class="form-control">
+                                    <option value="" disabled selected>Pilih Status</option>
+                                    <option value="Closed">Closed</option>
+                                    <option value="Open">Open</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Resolved">Complated</option>
+                                    <option value="Resolved">In Progress</option>
+
+                                </select>
                             </div>
                         </div>
 

@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
         if($request->user()->usertype === 'admin')
         {
-            return redirect('admin/dashboard');
+            return redirect('admin/ticketing'); //Saat admin login akan langsung diarahkan ke admin/ticketing
         }
 
         return redirect()->intended(route('dashboard', absolute: false));

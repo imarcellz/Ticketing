@@ -43,6 +43,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 // User
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [TicketController::class, 'userDashboard'])->name('dashboard');
+   
 });
 
 require __DIR__ . '/auth.php';

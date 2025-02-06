@@ -10,8 +10,6 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="d-flex align-items-center justify-content-between">
-                        <h1 class="mb-0">List Reporting</h1>
-                       
                     </div>
 
                     @if(Session::has('success'))

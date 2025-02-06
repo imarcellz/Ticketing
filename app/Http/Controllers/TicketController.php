@@ -87,8 +87,6 @@ class TicketController extends Controller
             return redirect(route('admin/ticketing'));
         }
     }
-
-
-}
+   }
 
 
