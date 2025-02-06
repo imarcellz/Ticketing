@@ -19,9 +19,11 @@ Proyek ini merupakan sistem ticketing berebasis Laravel 11 dengan Autentikasi da
 
 ## Instalasi
 '''GitBash
-git clone https://github.com/imarcellz/Ticketing.git
-cd Ticketing
-npm install & npm run build
+- git clone https://github.com/imarcellz/Ticketing.git
+
+- cd Ticketing
+
+- npm install & npm run build
 
 ## Konfigurasi
 1. Ubah file '.env' sesuaikan dengan pengaturan Anda
